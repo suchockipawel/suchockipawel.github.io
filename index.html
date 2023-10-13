@@ -32,11 +32,14 @@
                 font-size: 30px;
                 font-family: Arial, sans-serif;
             }
-            .moving-picture {
-                position: absolute;
-                top: 50px;
-                left: 50px;
-                transition: transform 1s;
+            .moving-image {
+            position: relative;
+            animation: moveAnimation 2s infinite alternate;
+            }
+
+                 @keyframes moveAnimation {
+                    0% { left: 0; }
+                    100% { left: 100px; }
             }
             #footer{
                 border: 1px solid black;
@@ -52,7 +55,8 @@
         </div>
         <div id="main" style="background-color: silver">
             <form>
-                <img src="books.jpg" alt="books" width="550"><img src="books.jpg" alt="books" width="550"><img src="books.jpg" alt="books" width="550">
+                <img src="books.jpg" alt="books" width="550" class="moving-image"><img src="books.jpg" alt="books" width="550" class="moving-image"><img src="books.jpg" alt="books" width="550" class="moving-image">
+
             </form>
             <p>
             <a href="https://books.google.com/">find a book</a> 
@@ -63,25 +67,8 @@
             <button class="happy" id="btn">payment approval</button>
             <p>
         </div>
-        <div id="footer">
-            <label>
-                <input type="text"/>
-                text
-            </label> 
-            <br>
-            <label>
-                <input type="email"/>
-                email
-            </label>
-            <br>
-            <label>
-                <input type="password"/>
-                password
-            </label>
-            <br>
-            <br>
+        <div id="footer"></div>
 
-        </div>
         <script>
             const button = document.getElementById("btn")
             const input = document.getElementById("amount")
