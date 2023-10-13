@@ -13,13 +13,24 @@
                 border: 1px solid black;
                 height: 100px;
                 margin-bottom: 20px;
-                padding: 30px;
+                padding: 50px;
+            }
+            .header-title {
+                color: #333;
+                font-size: 100px;
+                font-family: Arial, sans-serif;
+                margin: 10px 0;
+                text-align: center;
             }
             #main{
-                border: 1px solid black;
-                height: 1500px;
+                height: 500px;
                 margin-bottom: 20px;
                 padding: 20px;
+            }
+            .main-section {
+                color: #333;
+                font-size: 40px;
+                font-family: Arial, sans-serif;
             }
             #footer{
                 border: 1px solid black;
@@ -31,32 +42,37 @@
 <head>
     <body>
         <div id="header">
-            <h1> Pawel</h1>
+            <h1 class="header-title">BOOKS</h1> 
         </div>
         <div id="main" style="background-color: silver">
             <form>
-                <h1>Pictures</h1>
-                
-                <img src="Berlin.jpg" alt="Berlin" width="300">
-                <img src="Berlin2.jpg" alt="Berlin2" width="412">
-
-                <h2>Video</h2>
-                <video controls width="500" height="auto">
-                    <source src="video2.mp4" type="video/mp4">
-               
-                 </video>
-
+                <img src="books.jpg" alt="books" width="550"><img src="books.jpg" alt="books" width="550"><img src="books.jpg" alt="books" width="550">
             </form>
+            <h1 class="main-section">buy a book</h1>
+            <p>
+            <input type="text" id="amount" name="amount" placeholder="total amount">
+            <button class="happy" id="btn">payment approval</button>
+            <p>
         </div>
         <div id="footer">
-            <a href=" https://digitalcareerinstitute.org/">Digital Career Institute</a>
-            <p>
-            <label> send a message
-                <input type="text"/> 
-            </label>
-            <br>
-            <br>
-
+            <a href="https://books.google.com/">find a book</a> 
         </div>
+        <script>
+            const button = document.getElementById("btn")
+            const input = document.getElementById("amount")
+
+            function handleDonation(){
+                console.log(input)
+                const amount = input.value
+                if (amount == 0){
+                    alert("your order is empty")
+                    document.body.style.background = "black"
+                                }
+                else[
+                    alert("thank you! see you soon")
+                ]
+            }
+            button.addEventListener("click", handleDonation)
+        </script>
     </body>
 </head>
