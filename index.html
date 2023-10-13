@@ -29,8 +29,14 @@
             }
             .main-section {
                 color: #333;
-                font-size: 40px;
+                font-size: 30px;
                 font-family: Arial, sans-serif;
+            }
+            .moving-picture {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                transition: transform 1s;
             }
             #footer{
                 border: 1px solid black;
@@ -48,14 +54,33 @@
             <form>
                 <img src="books.jpg" alt="books" width="550"><img src="books.jpg" alt="books" width="550"><img src="books.jpg" alt="books" width="550">
             </form>
-            <h1 class="main-section">buy a book</h1>
+            <p>
+            <a href="https://books.google.com/">find a book</a> 
+            <p>
+            <h1 class="main-section">buy a book:</h1>
             <p>
             <input type="text" id="amount" name="amount" placeholder="total amount">
             <button class="happy" id="btn">payment approval</button>
             <p>
         </div>
         <div id="footer">
-            <a href="https://books.google.com/">find a book</a> 
+            <label>
+                <input type="text"/>
+                text
+            </label> 
+            <br>
+            <label>
+                <input type="email"/>
+                email
+            </label>
+            <br>
+            <label>
+                <input type="password"/>
+                password
+            </label>
+            <br>
+            <br>
+
         </div>
         <script>
             const button = document.getElementById("btn")
